@@ -1,0 +1,25 @@
+snippet rq "require()"
+const ${1: module} = require('${2:module}');
+endsnippet
+
+snippet fn "function()"
+function ${1:name}(${2:args}) {
+	${3:body}
+}
+endsnippet
+
+snippet afn "() => {}"
+const ${1:name} = (${2:args}) => {
+	${3:body}
+}
+endsnippet
+
+snippet a "(a) => {}"
+(${1:args}) => {
+	${2:body}
+}
+endsnippet
+
+snippet clg "console.log()"
+console.log(${1:args});
+endsnippet
