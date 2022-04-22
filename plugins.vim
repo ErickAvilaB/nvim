@@ -56,5 +56,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 " Tabular
 Plug 'godlygeek/tabular'
+" Markdown
+Plug 'preservim/vim-markdown'
 
 call plug#end()
