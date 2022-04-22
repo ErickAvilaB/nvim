@@ -14,6 +14,7 @@ set cursorline
 set background=dark
 set termguicolors
 set splitright
+set nofoldenable
 
 " Numbers
 set ruler
