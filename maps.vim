@@ -94,6 +94,7 @@ endfunction
 nnoremap <Leader>pt :call ExecuteCode("python3 %")<CR>
 nnoremap <Leader>nt :call ExecuteCode("node %")<CR>
 nnoremap <Leader>is :call ExecuteCode("live-server")<CR>
+nnoremap <Leader>m :call ExecuteCode("grip % 5000")<CR>
 
 
 " Ultisnips
@@ -103,5 +104,5 @@ let g:UltiSnipsJumpForwardTrigger="<S-tab>"
 " Git maps
 nmap <Leader>ga :! git add .<CR>
 nmap <Leader>gc :! git commit -m ""
-nmap <Leader>gp :! git push
+nmap <Leader>gp :call ExecuteCode("git push")<CR>
 nmap <Leader>gs :! git status<CR>
