@@ -77,7 +77,7 @@ let g:ale_fix_on_save = 1
 
 " Emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript EmmetInstall
+autocmd FileType html,css,javascript,markdown EmmetInstall
 let g:user_emmet_settings = {
 \  'variables': {'lang': 'en'},
 \  'html': {
