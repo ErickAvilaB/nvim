@@ -94,7 +94,17 @@ endfunction
 nnoremap <Leader>pt :call ExecuteCode("python3 %")<CR>
 nnoremap <Leader>nt :call ExecuteCode("node %")<CR>
 nnoremap <Leader>is :call ExecuteCode("live-server")<CR>
-nnoremap <Leader>m :call ExecuteCode("grip % 5000")<CR>
+nnoremap <Leader>m :call ExecuteCode("markserv %")<CR>
+
+
+" ExecuteCode and open in browser
+function! OpenBrowser(lenguage, port)
+  execute "call ExecuteCode(a:lenguage)"
+  execute "! google-chrome http://localhost:" . a:port
+endfunction
+
+nnoremap <Leader>pb :call OpenBrowser("python3 %", "5000")<CR>
+nnoremap <Leader>nb :call OpenBrowser("node %", "3000")<CR>
 
 
 " Ultisnips
