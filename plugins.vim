@@ -2,7 +2,8 @@
 call plug#begin('/home/erick/.config/nvim/plugged')
 
 " Themes
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " Editor
 " Icons

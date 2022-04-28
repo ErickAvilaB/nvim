@@ -4,8 +4,12 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 
 " Themes
-let g:onedark_terminal_italics=1
-colorscheme onedark
+"let g:onedark_terminal_italics=1
+"colorscheme onedark
+
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 
 " Lightline theme
 let g:lightline = {
