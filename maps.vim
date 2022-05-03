@@ -108,8 +108,8 @@ nnoremap <Leader>nb :call OpenBrowser("node %", "3000")<CR>
 
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<C-k>"
-let g:UltiSnipsJumpForwardTrigger="<C-k>"
+let g:UltiSnipsExpandTrigger="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger="<S-tab>"
 
 " Git maps
 nmap <Leader>ga :! git add .<CR>
