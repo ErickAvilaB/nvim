@@ -1,5 +1,5 @@
 " Install plugins
-call plug#begin('/home/erick/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Themes
 Plug 'joshdick/onedark.vim'
