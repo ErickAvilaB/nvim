@@ -8,6 +8,7 @@ let mapleader=" "
 nmap <Leader>e <Plug>(easymotion-s2)
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <Leader>Q :qa<CR>
 nmap <Leader>p :! python3 %<CR>
 "nmap <Leader>c :! gcc %<CR>:! ./a.out<CR>
 nmap <Leader>n :! node %<CR>
