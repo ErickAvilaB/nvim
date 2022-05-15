@@ -37,7 +37,7 @@ set ignorecase
 set guicursor+=i:-blinkwait150-blinkoff150-blinkon150
 
 " Python host
-let g:python3_host_prog = '/usr/bin/python3.10'
+let g:python3_host_prog = '/usr/bin/python3.8'
 au FileType python setlocal formatprg=autopep8\ -
 
 " True Color
