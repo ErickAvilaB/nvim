@@ -94,6 +94,7 @@ endfunction
 
 nnoremap <Leader>pt :call ExecuteCode("python3 %")<CR>
 nnoremap <Leader>nt :call ExecuteCode("node %")<CR>
+nnoremap <Leader>ns :call ExecuteCode("npm start")<CR>
 nnoremap <Leader>is :call ExecuteCode("live-server")<CR>
 nnoremap <Leader>m :call ExecuteCode("markserv %")<CR>
 

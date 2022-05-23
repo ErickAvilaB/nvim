@@ -13,7 +13,7 @@ set clipboard=unnamedplus
 set cursorline
 set background=dark
 set termguicolors
-set splitright
+set splitright splitbelow
 set nofoldenable
 
 " Numbers
