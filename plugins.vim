@@ -59,5 +59,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
 " Markdown
 Plug 'preservim/vim-markdown'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 call plug#end()
