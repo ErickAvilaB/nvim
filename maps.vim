@@ -23,6 +23,7 @@ nmap <C-a> ggVG
 imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 nmap <S-Down> 10j
 nmap <S-Up> 10k
+nmap <Leader>b :Buffers<CR>
 
 " Emmet maps
 let g:user_emmet_leader_key='<C-Z>'

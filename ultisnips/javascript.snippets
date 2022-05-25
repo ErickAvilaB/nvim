@@ -5,21 +5,37 @@ endsnippet
 snippet fn "function()"
 function ${1:name}(${2:args}) {
 	${3:body}
-}
+};
 endsnippet
 
 snippet afn "() => {}"
 const ${1:name} = (${2:args}) => {
 	${3:body}
-}
+};
 endsnippet
 
 snippet a "(a) => {}"
-(${1:args}) => {
-	${2:body}
-}
+() => {
+	${1:body}
+};
 endsnippet
 
 snippet clg "console.log()"
 console.log(${1:args});
+endsnippet
+
+snippet i
+import '${1:file}';
+endsnippet
+
+snippet if
+import ${1:module} from '${2:location}';
+endsnippet
+
+snippet ir
+import React from 'react';
+endsnippet
+
+snippet ip
+import PropTypes from 'prop-types';
 endsnippet
