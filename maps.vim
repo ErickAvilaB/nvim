@@ -7,7 +7,7 @@ nmap ñ <C-n>ma
 let mapleader=" "
 nmap <Leader>e <Plug>(easymotion-s2)
 nmap <Leader>w :w<CR>
-nmap <Leader>wq :W<CR>
+nmap <Leader>W :wq<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :qa<CR>
 nmap <Leader>pr <Plug>(Prettier)
