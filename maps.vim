@@ -7,12 +7,11 @@ nmap ñ <C-n>ma
 let mapleader=" "
 nmap <Leader>e <Plug>(easymotion-s2)
 nmap <Leader>w :w<CR>
+nmap <Leader>wq :W<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :qa<CR>
-nmap <Leader>p :! python3 %<CR>
 nmap <Leader>pr <Plug>(Prettier)
 "nmap <Leader>c :! gcc %<CR>:! ./a.out<CR>
-nmap <Leader>n :! node %<CR>
 nmap <Leader>+ 5<C-w>>
 nmap <Leader>- 5<C-w><
 nmap <Leader>s :/
@@ -94,10 +93,10 @@ function! ExecuteCode(lenguage)
   endif
 endfunction
 
-nnoremap <Leader>pt :call ExecuteCode("python3 %")<CR>
-nnoremap <Leader>nt :call ExecuteCode("node %")<CR>
+nnoremap <Leader>p :call ExecuteCode("python3 %")<CR>
+nnoremap <Leader>n :call ExecuteCode("node %")<CR>
 nnoremap <Leader>ns :call ExecuteCode("npm start")<CR>
-nnoremap <Leader>is :call ExecuteCode("live-server")<CR>
+nnoremap <Leader>iv :call ExecuteCode("live-server")<CR>
 nnoremap <Leader>m :call ExecuteCode("markserv %")<CR>
 
 
@@ -107,7 +106,7 @@ function! OpenBrowser(lenguage, port)
   execute "! google-chrome http://localhost:" . a:port
 endfunction
 
-nnoremap <Leader>pb :call OpenBrowser("python3 %", "5000")<CR>
+nnoremap <Leader>pf :call OpenBrowser("python3 %", "5000")<CR>
 nnoremap <Leader>nb :call OpenBrowser("node %", "3000")<CR>
 
 
