@@ -110,3 +110,6 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 " Prettier
 let g:prettier#config#single_quote = 'true'
+
+" Screenchots
+let g:vimShotSavePath = '~/Pictures'

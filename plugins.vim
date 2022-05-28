@@ -61,5 +61,6 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-
+" Screenshots
+Plug 'SergioRibera/vim-screenshot', { 'do': 'npm install --prefix Renderizer' }
 call plug#end()
