@@ -35,7 +35,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
 " Auto pairs
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 
 " Coc config. Use tab for complet
 function! s:check_back_space() abort
