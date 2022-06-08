@@ -63,4 +63,7 @@ Plug 'preservim/vim-markdown'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Screenshots
 Plug 'SergioRibera/vim-screenshot', { 'do': 'npm install --prefix Renderizer' }
+" Material Theme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+
 call plug#end()

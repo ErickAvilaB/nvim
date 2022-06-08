@@ -4,16 +4,16 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 
 " Themes
-let g:onedark_terminal_italics=1
-colorscheme onedark
+"let g:onedark_terminal_italics=1
+"colorscheme onedark
 
-"let g:tokyonight_style = 'night'
-"let g:tokyonight_enable_italic = 1
-"colorscheme tokyonight
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'palenight'
+colorscheme material
 
 " Lightline theme
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'material_vim',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
