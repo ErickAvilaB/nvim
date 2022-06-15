@@ -93,7 +93,6 @@ let g:user_emmet_settings = {
 \              ."<head>\n"
 \              ."\t<meta charset=\"${charset}\">\n"
 \              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-\              ."\t<link rel=\"stylesheet\" href=\"\">\n"
 \              ."\t<title></title>\n"
 \              ."</head>\n"
 \              ."<body>\n\t${child}|\n</body>\n"
