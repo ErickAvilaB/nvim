@@ -22,8 +22,6 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-"let g:lightline = {}
-"let g:lightline.colorscheme = 'one'
 
 " NERDTree config
 let NERDTreeQuitOnOpen=1
@@ -73,7 +71,7 @@ let g:fzf_colors =
 " Custom ultisnips
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/ultisnips']
 
-" Autofiz with ALE and ESLint
+" Autofix with ALE and ESLint
 let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['eslint']
 let g:ale_fixers.python = ['autopep8']
@@ -111,5 +109,5 @@ let g:vim_markdown_conceal_code_blocks = 0
 " Prettier
 let g:prettier#config#single_quote = 'true'
 
-" Screenchots
+" Screenshots
 let g:vimShotSavePath = '~/Pictures'

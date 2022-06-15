@@ -50,7 +50,7 @@ if (empty($TMUX))
   endif
 endif
 
-" ALE
+" ALE | this config need to be before plugins are loaded.
 let g:ale_disable_lsp = 1
 
 so ~/.config/nvim/plugins.vim

@@ -10,7 +10,7 @@ nmap <Leader>w :w<CR>
 nmap <Leader>W :wq<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :qa<CR>
-nmap <Leader>pr <Plug>(Prettier)
+nmap <Leader>I <Plug>(Prettier)
 "nmap <Leader>c :! gcc %<CR>:! ./a.out<CR>
 nmap <Leader>+ 5<C-w>>
 nmap <Leader>- 5<C-w><
@@ -19,7 +19,7 @@ nmap <Leader>o :! xdg-open %<CR>
 nmap <Leader>i gg=G
 nmap <Leader>ip gggqG
 nmap <C-a> ggVG
-imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
 nmap <S-Down> 10j
 nmap <S-Up> 10k
 nmap <Leader>b :Buffers<CR>
@@ -34,8 +34,8 @@ imap <S-Right> <CR><Up><End><CR>
 xmap s <Plug>VSurround
 
 " Fzf maps
-nmap <Leader>ff :Files<Cr>
-nmap <Leader>fa :Ag<Cr>
+nmap <Leader>f :Files<Cr>
+nmap <Leader>F :Ag<Cr>
 
 " Map to open a terminal
 function! OpenTerminal()
@@ -96,7 +96,7 @@ endfunction
 nnoremap <Leader>p :call ExecuteCode("python3 %")<CR>
 nnoremap <Leader>n :call ExecuteCode("node %")<CR>
 nnoremap <Leader>ns :call ExecuteCode("npm start")<CR>
-nnoremap <Leader>iv :call ExecuteCode("live-server")<CR>
+nnoremap <Leader>ls :call ExecuteCode("live-server")<CR>
 nnoremap <Leader>m :call ExecuteCode("markserv %")<CR>
 
 
@@ -111,8 +111,8 @@ nnoremap <Leader>nb :call OpenBrowser("node %", "3000")<CR>
 
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<S-tab>"
-let g:UltiSnipsJumpForwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<C-J>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
 
 " Git maps
 nmap <Leader>ga :! git add .<CR>

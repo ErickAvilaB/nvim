@@ -2,8 +2,9 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
-Plug 'joshdick/onedark.vim'
-"Plug 'ghifarit53/tokyonight-vim'
+"Plug 'joshdick/onedark.vim'
+" Material Theme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 " Editor
 " Icons
@@ -63,7 +64,5 @@ Plug 'preservim/vim-markdown'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Screenshots
 Plug 'SergioRibera/vim-screenshot', { 'do': 'npm install --prefix Renderizer' }
-" Material Theme
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 call plug#end()
