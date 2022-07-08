@@ -35,17 +35,6 @@ let NERDTreeMapOpenInTab='\t'
 " Auto pairs
 let g:AutoPairsFlyMode = 0
 
-" Coc config. Use tab for complet
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-
 " Fzf at top
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
