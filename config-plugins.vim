@@ -60,10 +60,11 @@ let g:fzf_colors =
 " Custom ultisnips
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/ultisnips']
 
-" Autofix with ALE and ESLint
-let g:ale_fixers = {}
-let g:ale_fixers.javascript = ['eslint']
-let g:ale_fixers.python = ['autopep8']
+" ALE
+" Linters
+let b:ale_linters = {'javascript': ['eslint'], 'python': ['pylint']}
+" Fixers
+let g:ale_fixers = {'javascript': ['eslint'], 'python': ['autopep8']}
 let g:ale_fix_on_save = 1
 
 " Emmet
