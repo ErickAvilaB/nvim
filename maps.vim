@@ -11,13 +11,13 @@ nmap <Leader>W :wq<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :qa<CR>
 nmap <Leader>I <Plug>(Prettier)
+autocmd FileType python noremap <buffer> <Leader>P :call Autopep8()<CR>
 "nmap <Leader>c :! gcc %<CR>:! ./a.out<CR>
 nmap <Leader>+ 5<C-w>>
 nmap <Leader>- 5<C-w><
 nmap <Leader>s :/
 nmap <Leader>o :! xdg-open %<CR>
 nmap <Leader>i gg=G
-nmap <Leader>ip gggqG
 nmap <C-a> ggVG
 imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
 nmap <S-Down> 10j

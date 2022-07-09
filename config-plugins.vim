@@ -60,6 +60,9 @@ let g:fzf_colors =
 " Custom ultisnips
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/ultisnips']
 
+" Pep8
+autocmd FileType python set equalprg=autopep8\ -
+
 " ALE
 " Linters
 let b:ale_linters = {'javascript': ['eslint'], 'python': ['pylint']}
