@@ -33,6 +33,9 @@ filetype indent on
 set incsearch
 set ignorecase
 
+" Spell check
+set spell
+
 " Cursor
 set guicursor+=i:-blinkwait150-blinkoff150-blinkon150
 
