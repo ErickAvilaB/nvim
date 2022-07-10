@@ -64,10 +64,14 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/ultisnips']
 autocmd FileType python set equalprg=autopep8\ -
 
 " ALE
+let g:ale_linters_explicit = 1 " Only run seted linters
+
 " Linters
 let b:ale_linters = {'javascript': ['eslint'], 'python': ['pylint']}
+
 " Fixers
-let g:ale_fixers = {'javascript': ['eslint'], 'python': ['autopep8']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'python': ['autopep8'], 'html': ['prettier'], 'css': ['prettier']}
+let g:ale_javascript_prettier_options = '--single-quote'
 let g:ale_fix_on_save = 1
 
 " Emmet
