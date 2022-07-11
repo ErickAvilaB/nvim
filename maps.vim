@@ -1,65 +1,35 @@
-" Nerd tree
-nnoremap <C-n> :NERDTree<CR>
-nmap ñ <C-n>ma
+" ===========================================================================
+" MAPS
 
-" Maps
-" Leaders key
+" Leader key
 let mapleader=" "
-nmap <Leader>e <Plug>(easymotion-s2)
+
+" Editor maps
 nmap <Leader>w :w<CR>
 nmap <Leader>W :wq<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :qa<CR>
-nmap <Leader>I <Plug>(Prettier)
-autocmd FileType python noremap <buffer> <Leader>P :call Autopep8()<CR>
-"nmap <Leader>c :! gcc %<CR>:! ./a.out<CR>
 nmap <Leader>+ 5<C-w>>
 nmap <Leader>- 5<C-w><
 nmap <Leader>s :/
-nmap <Leader>o :! xdg-open %<CR>
-nmap <Leader>i gg=G
 nmap <C-a> ggVG
-imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
 nmap <S-Down> 10j
 nmap <S-Up> 10k
-nmap <Leader>b :Buffers<CR>
 
-" Coc maps
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" ===========================================================================
+" FORMAT CODE
 
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" Prettier
+autocmd FileType html,css,javascript nmap <Leader>i <Plug>(Prettier)
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" Autopep8
+autocmd FileType python noremap <buffer> <Leader>i :call Autopep8()<CR>
 
-" Emmet maps
-let g:user_emmet_leader_key='<C-Z>'
-imap <C-j> <C-Z>,
-imap <C-y> html:5<C-Z>,
-imap <S-Right> <CR><Up><End><CR>
 
-" Surround map
-xmap s <Plug>VSurround
+" ==========================================================================
+" TERMINAL
 
-" Fzf maps
-nmap <Leader>f :Files<Cr>
-nmap <Leader>F :Ag<Cr>
-
-" Map to open a terminal
+" Function to open a terminal
 function! OpenTerminal()
   " move to right most buffer
   execute "normal \<C-l>"
@@ -93,10 +63,8 @@ function! OpenTerminal()
     startinsert!
   endif
 endfunction
-nnoremap <C-t> :call OpenTerminal()<CR>
 
-
-" Execute code
+" Execute code in terminal
 function! ExecuteCode(lenguage)
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&buftype", "not found")
@@ -115,27 +83,93 @@ function! ExecuteCode(lenguage)
   endif
 endfunction
 
-nnoremap <Leader>p :call ExecuteCode("python3 %")<CR>
-nnoremap <Leader>n :call ExecuteCode("node %")<CR>
-nnoremap <Leader>ns :call ExecuteCode("npm start")<CR>
-nnoremap <Leader>ls :call ExecuteCode("live-server")<CR>
-nnoremap <Leader>m :call ExecuteCode("markserv %")<CR>
-
-
 " ExecuteCode and open in browser
 function! OpenBrowser(lenguage, port)
   execute "call ExecuteCode(a:lenguage)"
   execute "! google-chrome http://localhost:" . a:port
 endfunction
 
-nnoremap <Leader>pf :call OpenBrowser("python3 %", "5000")<CR>
-nnoremap <Leader>nb :call OpenBrowser("node %", "3000")<CR>
+" --------------------------------------------------------------------------
+"  Terminal maps
 
+" Map to open a terminal
+nnoremap <C-t> :call OpenTerminal()<CR>
 
+" RUNNING
+autocmd FileType python nnoremap <Leader>b :call ExecuteCode("python3 %")<CR>
+autocmd FileType javascript nnoremap <Leader>b :call ExecuteCode("node %")<CR>
+autocmd FileType html nmap <Leader>b :! xdg-open %<CR>
+autocmd FileType markdown nnoremap <Leader>b :call ExecuteCode("markserv %")<CR>
+"autocmd FileType c nmap <Leader>b :! gcc %<CR>:! ./a.out<CR>
+
+" ANOTHER RUNNING PROCESS
+autocmd FileType javascript nnoremap <Leader>br :call ExecuteCode("npm start")<CR>
+autocmd FileType python nnoremap <Leader>bf :call OpenBrowser("python3 %", "5000")<CR>
+autocmd FileType javascript nnoremap <Leader>be :call OpenBrowser("node %", "3000")<CR>
+autocmd FileType html nnoremap <Leader>ls :call ExecuteCode("live-server")<CR>
+
+" ==========================================================================
+" PLUGINS MAPS
+
+" --------------------------------------------------------------------------
+" Nerd tree
+nnoremap <C-n> :NERDTree<CR>
+nmap ñ <C-n>ma
+
+" --------------------------------------------------------------------------
+" Easymotion
+nmap <Leader>e <Plug>(easymotion-s2)
+
+" --------------------------------------------------------------------------
+" Lorem
+autocmd FileType html,markdown imap <C-l> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+" --------------------------------------------------------------------------
+" Coc maps
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" --------------------------------------------------------------------------
+" Emmet maps
+let g:user_emmet_leader_key='<C-Z>'
+imap <C-j> <C-Z>,
+autocmd FileType html imap <C-y> html:5<C-Z>,
+autocmd FileType html imap <S-Right> <CR><Up><End><CR>
+
+" --------------------------------------------------------------------------
+" Surround map
+xmap s <Plug>VSurround
+
+" --------------------------------------------------------------------------
+" Fzf maps
+nmap <Leader>f :Files<Cr>
+nmap <Leader>F :Ag<Cr>
+nmap <Leader>t :Buffers<CR>
+
+" --------------------------------------------------------------------------
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<S-tab>"
 let g:UltiSnipsJumpForwardTrigger="<S-tab>"
 
+" --------------------------------------------------------------------------
 " Git maps
 nmap <Leader>ga :! git add .<CR>
 nmap <Leader>gc :! git commit -m ""
