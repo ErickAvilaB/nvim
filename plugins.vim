@@ -64,5 +64,7 @@ Plug 'preservim/vim-markdown'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Screenshots
 Plug 'SergioRibera/vim-screenshot', { 'do': 'npm install --prefix Renderizer' }
+" C# integration
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
