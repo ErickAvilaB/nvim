@@ -54,6 +54,8 @@ endif
 Plug 'github/copilot.vim'
 " ALE
 Plug 'dense-analysis/ale'
+" Lightline ale
+Plug 'maximbaz/lightline-ale'
 " Vim Fugitive
 Plug 'tpope/vim-fugitive'
 " Tabular
