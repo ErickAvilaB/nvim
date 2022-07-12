@@ -25,9 +25,6 @@ autocmd FileType html,css,javascript nmap <Leader>i <Plug>(Prettier)
 " Autopep8
 autocmd FileType python noremap <buffer> <Leader>i :call Autopep8()<CR>
 
-" Omnisharp
-autocmd FileType cs noremap <buffer> <Leader>i :OmniSharpCodeFormat<CR>
-
 
 " ==========================================================================
 " TERMINAL
@@ -101,7 +98,6 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 " RUNNING
 autocmd FileType python nnoremap <Leader>b :call ExecuteCode("python3 %")<CR>
 autocmd FileType javascript nnoremap <Leader>b :call ExecuteCode("node %")<CR>
-autocmd FileType cs nnoremap <Leader>b :call ExecuteCode("dotnet run")<CR>
 autocmd FileType html nmap <Leader>b :! xdg-open %<CR>
 autocmd FileType markdown nnoremap <Leader>b :call ExecuteCode("markserv %")<CR>
 "autocmd FileType c nmap <Leader>b :! gcc %<CR>:! ./a.out<CR>
