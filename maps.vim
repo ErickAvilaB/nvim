@@ -150,7 +150,7 @@ endif
 " --------------------------------------------------------------------------
 " Emmet maps
 let g:user_emmet_leader_key='<C-Z>'
-imap <C-j> <C-Z>,
+imap <M-j> <C-Z>,
 autocmd FileType html imap <C-y> html:5<C-Z>,
 autocmd FileType html imap <S-Right> <CR><Up><End><CR>
 
@@ -175,3 +175,14 @@ nmap <Leader>ga :! git add .<CR>
 nmap <Leader>gc :! git commit -m ""
 nmap <Leader>gp :call ExecuteCode("git push")<CR>
 nmap <Leader>gs :! git status<CR>
+
+" --------------------------------------------------------------------------
+" ALE
+nmap <Leader>j :ALENext<CR>
+nmap <Leader>k :ALEPrevious<CR>
+
+" --------------------------------------------------------------------------
+" Copilot
+nmap <Leader>h :Copilot panel<CR>
+imap <C-j> <Plug>(copilot-next)
+imap <C-k> <Plug>(copilot-previous)

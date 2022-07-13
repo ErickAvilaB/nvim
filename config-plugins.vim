@@ -64,7 +64,7 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/ultisnips']
 let g:ale_linters_explicit = 1 " Only run seted linters
 
 " Linters
-let b:ale_linters = {'javascript': ['eslint'], 'python': ['pylint']}
+let b:ale_linters = {'javascript': ['eslint'], 'python': ['pylint'], 'html': ['stylelint'], 'css': ['csslint']}
 
 " Fixers
 let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'python': ['autopep8'], 'html': ['prettier'], 'css': ['prettier']}
